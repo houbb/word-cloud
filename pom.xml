@@ -11,7 +11,7 @@
 
     <groupId>com.github.houbb</groupId>
     <artifactId>word-cloud</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.0.0</version>
 
     <properties>
         <!--============================== All Plugins START ==============================-->
@@ -30,10 +30,14 @@
         <project.compiler.level>1.7</project.compiler.level>
 
         <!--============================== INTER ==============================-->
-        <heaven.version>0.1.119</heaven.version>
+        <heaven.version>0.1.129</heaven.version>
+        <segment.version>0.1.8</segment.version>
+        <stopword.version>0.0.1</stopword.version>
 
         <!--============================== OTHER ==============================-->
-        <junit.version>4.12</junit.version>
+        <junit.version>4.13</junit.version>
+        <kumo.version>1.5</kumo.version>
+
     </properties>
 
     <dependencies>
@@ -44,6 +48,16 @@
             <groupId>com.github.houbb</groupId>
             <artifactId>heaven</artifactId>
             <version>${heaven.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.github.houbb</groupId>
+            <artifactId>segment</artifactId>
+            <version>${segment.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.github.houbb</groupId>
+            <artifactId>stopword</artifactId>
+            <version>${stopword.version}</version>
         </dependency>
 
         <!--============================== OTHER ==============================-->
@@ -57,7 +71,7 @@
         <dependency>
             <groupId>com.kennycason</groupId>
             <artifactId>kumo</artifactId>
-            <version>1.5</version>
+            <version>${kumo.version}</version>
         </dependency>
     </dependencies>
 
