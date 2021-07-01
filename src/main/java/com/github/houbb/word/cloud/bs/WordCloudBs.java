@@ -3,8 +3,6 @@ package com.github.houbb.word.cloud.bs;
 import com.github.houbb.word.cloud.support.freq.DefaultWordFrequency;
 import com.github.houbb.word.cloud.support.freq.IWordFrequency;
 import com.github.houbb.word.cloud.support.freq.WordFrequencyContext;
-import com.github.houbb.word.cloud.support.stopword.DefaultStopWord;
-import com.github.houbb.word.cloud.support.stopword.IStopWord;
 import com.kennycason.kumo.CollisionMode;
 import com.kennycason.kumo.WordCloud;
 import com.kennycason.kumo.WordFrequency;
@@ -17,6 +15,8 @@ import com.kennycason.kumo.palette.ColorPalette;
 
 import java.awt.*;
 import java.util.List;
+import java.util.Random;
+import java.util.concurrent.ThreadLocalRandom;
 
 /**
  * @author binbin.hou
@@ -41,12 +41,6 @@ public class WordCloudBs {
      * @since 1.0.0
      */
     private IWordFrequency wordFrequency = new DefaultWordFrequency();
-
-    /**
-     * 停顿词实现
-     * @since 1.0.0
-     */
-    private IStopWord stopWord = new DefaultStopWord();
 
     /**
      * 文本内容
@@ -98,8 +92,7 @@ public class WordCloudBs {
 
     private KumoFont kumoFont = new KumoFont("Default", FontWeight.BOLD);
 
-    private ColorPalette colorPalette = new ColorPalette(new Color(177906), new Color(3654384), new Color(8178662),
-            new Color(12904434), new Color(16777215));
+    private ColorPalette colorPalette = buildRandomColorPalette(5);
 
     public WordCloudBs outPath(String outPath) {
         this.outPath = outPath;
@@ -108,11 +101,6 @@ public class WordCloudBs {
 
     public WordCloudBs wordFrequency(IWordFrequency wordFrequency) {
         this.wordFrequency = wordFrequency;
-        return this;
-    }
-
-    public WordCloudBs stopWord(IStopWord stopWord) {
-        this.stopWord = stopWord;
         return this;
     }
 
@@ -178,7 +166,7 @@ public class WordCloudBs {
     public void wordCloud() {
         //1. 获取词频
         WordFrequencyContext frequencyContext = new WordFrequencyContext();
-        frequencyContext.text(text).limit(limit).stopWord(stopWord);
+        frequencyContext.text(text).limit(limit);
         final List<WordFrequency> wordFrequencies = this.wordFrequency.freq(frequencyContext);
 
         final Dimension dimension = new Dimension(width, height);
@@ -195,6 +183,22 @@ public class WordCloudBs {
 
         wordCloud.build(wordFrequencies);
         wordCloud.writeToFile(this.outPath);
+    }
+
+    /**
+     * 构建随机的颜色
+     * @param n 个数
+     * @return 结果
+     * @since 1.1.0
+     */
+    private static ColorPalette buildRandomColorPalette(final int n) {
+        final Random random = ThreadLocalRandom.current();
+
+        final Color[] colors = new Color[n];
+        for (int i = 0; i < colors.length; i++) {
+            colors[i] = new Color(random.nextInt(230) + 25, random.nextInt(230) + 25, random.nextInt(230) + 25);
+        }
+        return new ColorPalette(colors);
     }
 
 }

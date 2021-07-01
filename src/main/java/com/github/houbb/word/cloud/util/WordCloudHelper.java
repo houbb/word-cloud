@@ -6,7 +6,9 @@ import com.github.houbb.word.cloud.bs.WordCloudBs;
  * @author binbin.hou
  * @since 1.0.0
  */
-public class WordCloudHelper {
+public final class WordCloudHelper {
+
+    private WordCloudHelper(){}
 
     /**
      * 云图

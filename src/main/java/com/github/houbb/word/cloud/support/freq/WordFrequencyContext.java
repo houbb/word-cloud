@@ -1,7 +1,5 @@
 package com.github.houbb.word.cloud.support.freq;
 
-import com.github.houbb.word.cloud.support.stopword.IStopWord;
-
 /**
  * @author binbin.hou
  * @since 1.0.0
@@ -11,8 +9,6 @@ public class WordFrequencyContext {
     private String text;
 
     private int limit;
-
-    private IStopWord stopWord;
 
     public String text() {
         return text;
@@ -32,21 +28,11 @@ public class WordFrequencyContext {
         return this;
     }
 
-    public IStopWord stopWord() {
-        return stopWord;
-    }
-
-    public WordFrequencyContext stopWord(IStopWord stopWord) {
-        this.stopWord = stopWord;
-        return this;
-    }
-
     @Override
     public String toString() {
         return "WordFrequencyContext{" +
                 "text='" + text + '\'' +
                 ", limit=" + limit +
-                ", stopWord=" + stopWord +
                 '}';
     }
 
