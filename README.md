@@ -21,7 +21,7 @@
 <dependency>
      <groupId>com.github.houbb</groupId>
      <artifactId>word-cloud</artifactId>
-     <version>1.0.0</version>
+     <version>1.1.0</version>
 </dependency>
 ```
 
@@ -40,12 +40,4 @@ WordCloudHelper.wordCloud("该作讲述的是一个名为德特茅斯的衰落�
 
 - [ ] 默认的形状，图片。
 
-- [ ] 让词频对用户默认不可见，但是支持自定义。
-
-- [ ] 停顿词
-
-停顿词的性能优化，使用 hashset 保存。
-
-停顿词区分中文英文，细化。
-
-特殊的中英文标点符号
+- [ ] 引入图片背景
