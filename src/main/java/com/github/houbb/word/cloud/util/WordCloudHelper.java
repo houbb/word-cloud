@@ -4,7 +4,6 @@ import com.github.houbb.word.cloud.bs.WordCloudBs;
 import com.github.houbb.word.cloud.exception.WordCloudException;
 import com.kennycason.kumo.bg.PixelBoundryBackground;
 
-import java.io.FileInputStream;
 import java.io.IOException;
 
 /**
