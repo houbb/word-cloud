@@ -11,6 +11,8 @@
 
 - 极简 api，一行代码搞定一切
 
+- 支持自定义云图背景
+
 > [变更日志](https://github.com/houbb/word-cloud/blob/master/CHANGELOG.md)
 
 # 快速开始
@@ -21,7 +23,7 @@
 <dependency>
      <groupId>com.github.houbb</groupId>
      <artifactId>word-cloud</artifactId>
-     <version>1.1.0</version>
+     <version>1.2.0</version>
 </dependency>
 ```
 
@@ -36,8 +38,23 @@ WordCloudHelper.wordCloud("该作讲述的是一个名为德特茅斯的衰落�
 
 ![out.png](out.png)
 
+## 支持背景
+
+我们以鲸鱼的背景，可以让文字以图像的形式展现：
+
+```java
+String imagePath = "backgrounds\\whale_small.png";
+WordCloudHelper.wordCloud(text, "out_bg.png", imagePath);
+```
+
+效果如下：
+
+![out_bg.png](out_bg.png)
+
 # Road-Map
 
-- [ ] 默认的形状，图片。
+- [ x ] 默认的形状，图片。
 
-- [ ] 引入图片背景
+- [ x ] 引入图片背景
+
+- [ ] image 居中
