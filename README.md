@@ -17,13 +17,15 @@
 
 # 快速开始
 
+[JS 版本体验](http://houbb.github.io/tools/wordCloud.html)
+
 ## maven 引入
 
 ```xml
 <dependency>
      <groupId>com.github.houbb</groupId>
      <artifactId>word-cloud</artifactId>
-     <version>1.2.1</version>
+     <version>1.2.2</version>
 </dependency>
 ```
 
@@ -58,3 +60,5 @@ WordCloudHelper.wordCloud(text, "out_bg.png", imagePath);
 - [ x ] 引入图片背景
 
 - [ ] image 居中
+
+- [ ] 部署后端服务
