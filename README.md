@@ -1,3 +1,24 @@
+# 创作背景
+
+可以随时生成一副很酷的云图，一直是个人的梦想。
+
+很久以前，写过一个简单版本：[js 版本体验](http://houbb.github.io/tools/wordCloud.html)。
+
+效果如下：
+
+![js_online](js_online.png)
+
+不过存在一些小问题：
+
+1. 无法自动分词
+
+2. 无法根据词频设置字体大小
+
+于是自己在 github 上逛了一圈，发现了 [kumo](https://github.com/kennycason/kumo) 这一款开源工具，
+入门体验发现要写 10 多行代码才能实现一个最基本的云图。
+
+这很不优雅，于是决定基于 kumo 实现一个更加易用的版本。
+
 # word-cloud
 
 [word-cloud](https://github.com/houbb/word-cloud) 是一款为 java 设计的云图生成工具。
@@ -12,6 +33,12 @@
 - 极简 api，一行代码搞定一切
 
 - 支持自定义云图背景
+
+- 支持中英文分词，默认对用户透明
+
+- 支持停顿词过滤，默认对用户透明
+
+- 支持各种用户自定义配置
 
 > [变更日志](https://github.com/houbb/word-cloud/blob/master/CHANGELOG.md)
 
@@ -55,10 +82,23 @@ WordCloudHelper.wordCloud(text, "out_bg.png", imagePath);
 
 # Road-Map
 
-- [ x ] 默认的形状，图片。
+- [x] 默认的形状，图片。
 
-- [ x ] 引入图片背景
+- [x] 引入图片背景
+
+- [ ] 默认的字体优化
 
 - [ ] image 居中
 
 - [ ] 部署后端服务
+
+发现自己的很多工具存在一个很大的问题，没有线上体验版本。
+
+好的工具，应该自己结合生产去实际使用，才能不断打磨，发现问题。
+
+- [ ] 开源
+
+本来是抱着自娱自乐的目的写了这个小工具，但是感觉还是应该把这个应用开源出来。
+
+因为没有 [kumo](https://github.com/kennycason/kumo) 的开源，也就没有这一款工具。 
+
