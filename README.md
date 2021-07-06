@@ -2,11 +2,11 @@
 
 可以随时生成一副很酷的云图，一直是个人的梦想。
 
-很久以前，写过一个简单版本：[js 版本体验](http://houbb.github.io/tools/wordCloud.html)。
+很久以前，写过一个简单版本：http://houbb.github.io/tools/wordCloud.html。
 
 效果如下：
 
-![js_online](js_online.png)
+![js_online](https://github.com/houbb/word-cloud/raw/master/js_online.png)
 
 不过存在一些小问题：
 
@@ -44,8 +44,6 @@
 
 # 快速开始
 
-[JS 版本体验](http://houbb.github.io/tools/wordCloud.html)
-
 ## maven 引入
 
 ```xml
@@ -65,7 +63,7 @@ WordCloudHelper.wordCloud("该作讲述的是一个名为德特茅斯的衰落�
 
 效果:
 
-![out.png](out.png)
+![out.png](https://github.com/houbb/word-cloud/raw/master/out.png)
 
 ## 支持背景
 
@@ -78,7 +76,7 @@ WordCloudHelper.wordCloud(text, "out_bg.png", imagePath);
 
 效果如下：
 
-![out_bg.png](out_bg.png)
+![out_bg.png](https://github.com/houbb/word-cloud/raw/master/out_bg.png)
 
 # Road-Map
 
@@ -90,15 +88,14 @@ WordCloudHelper.wordCloud(text, "out_bg.png", imagePath);
 
 - [ ] image 居中
 
-- [ ] 部署后端服务
-
-发现自己的很多工具存在一个很大的问题，没有线上体验版本。
-
-好的工具，应该自己结合生产去实际使用，才能不断打磨，发现问题。
-
-- [ ] 开源
+# 开源
 
 本来是抱着自娱自乐的目的写了这个小工具，但是感觉还是应该把这个应用开源出来。
 
 因为没有 [kumo](https://github.com/kennycason/kumo) 的开源，也就没有这一款工具。 
 
+开源地址：[https://github.com/houbb/word-cloud](https://github.com/houbb/word-cloud)
+
+如果喜欢，不妨给个 star 鼓励一下作者。
+
+希望和你一起，见证最好用的云图工具的成长。
