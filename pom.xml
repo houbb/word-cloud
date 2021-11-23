@@ -11,7 +11,7 @@
 
     <groupId>com.github.houbb</groupId>
     <artifactId>word-cloud</artifactId>
-    <version>1.2.2</version>
+    <version>1.3.0</version>
 
     <properties>
         <!--============================== All Plugins START ==============================-->
@@ -61,6 +61,15 @@
             <artifactId>kumo</artifactId>
             <version>${kumo.version}</version>
         </dependency>
+
+        <dependency>
+            <groupId>com.github.houbb</groupId>
+            <artifactId>nlp-chaizi</artifactId>
+            <version>1.1.0</version>
+            <optional>true</optional>
+            <scope>test</scope>
+        </dependency>
+
     </dependencies>
 
     <build>

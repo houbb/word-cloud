@@ -50,7 +50,7 @@
 <dependency>
      <groupId>com.github.houbb</groupId>
      <artifactId>word-cloud</artifactId>
-     <version>1.2.2</version>
+     <version>1.3.0</version>
 </dependency>
 ```
 
@@ -77,6 +77,12 @@ WordCloudHelper.wordCloud(text, "out_bg.png", imagePath);
 效果如下：
 
 ![out_bg.png](https://github.com/houbb/word-cloud/raw/master/out_bg.png)
+
+## 自定义
+
+结合汉字拆分实现的效果。
+
+![out_chaizi.png](out_chaizi.png)
 
 # Road-Map
 
